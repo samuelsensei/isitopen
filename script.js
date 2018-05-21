@@ -2,8 +2,8 @@ function betterWork(){
   var theDate = new Date();
   var theDateString = (theDate.getMonth() + 1) + "-" + theDate.getDate() + "-" + theDate.getFullYear();
   var Dates = [
-    ["11-23-2017", "11-24-2017", "Happy New Year", 0, 0],
-    ["5-5-2018", "5-6-2018", "Happy New Year", 18, 0]
+    ["11-23-2017", "11-24-2017", "Happy Thanksgiving", 0, 0],
+    ["12-31-2018", "1-1-2019", "Happy New Year", 18, 0]
   ];
   
   for (i=0; i<Dates.length; i++){
@@ -102,116 +102,5 @@ function betterWork(){
     }, 1000);
   }
 }  
-  
-    /*
-    if day of and special timing
-      >= 10:30am and < special timing
-        open
-        count down from appointed time
-      >= special timing
-        closed
-        quote
-    if day of and past 1/1:30
-      closed
-      say quote
-    if day after and before 1:30am
-      closed
-      say quote
-  */
- 
-  /*
-  if (time is between 1:30am and 10:30am){
-    closed
-  }
-  else if (time is between 1 and 1:30am){
-    if day (saturday or Sunday){
-      open
-      countdown 30-minutes
-    }
-    else {
-      closed
-    }
-  }
-  else if (time is between 12am and 1am){
-    if day (saturday or Sunday){
-      open
-      countdown +30min
-    }
-    else {
-      open
-      countdown regular
-    }
-  }
-  else if (time is between 10:30am and 12am){
-    if day(friday or saturday){
-      open
-      countdown +1:30
-    }
-    else {
-      open countdown +1:00
-    }
-  }
-  */
-
-
-
-
-
-
-
-
-
-
-function letsWork(){
-  var theDate = new Date;
-  //NORMAL DAYS
-  if (theDate.getDay() == 1 || 2 || 3 || 4 || 5) {
-    if (theDate.getHours >= 1 && theDate.getHours < 10){
-      document.getElementById("fillme").innerHTML = "<font color='red'>Closed</font>";
-    }
-    else if (theDate.getHours >= 10 && theDate.getHours < 11 && theDate.getMinutes < 30){
-      document.getElementById("fillme").innerHTML = "<font color='red'>Closed</font>";
-    }
-    else {
-      document.getElementById("fillme").innerHTML = "<font color='green'>Open</font>";
-    }
-  }  
-  else if (theDate.getDay() == 6 || 7) {
-    if (theDate.getHours >= 2 && theDate.getHours < 10){
-      document.getElementById("fillme").innerHTML = "<font color='red'>Closed</font>";
-    }
-    else if (theDate.getHours >= 10 && theDate.getHours < 11 && theDate.getMinutes < 30){
-      document.getElementById("fillme").innerHTML = "<font color='red'>Closed</font>";
-    }    
-    else if (theDate.getHours >= 1 && theDate.getHours < 2 && theDate.getMinutes >= 30){
-      document.getElementById("fillme").innerHTML = "<font color='red'>Closed</font>";
-    }
-    else {
-      document.getElementById("fillme").innerHTML = "<font color='green'>Open</font>";
-    }
-  }
-  
-/*
-    if (day=monday,tuesday,wednesday,thursday,friday){
-      if (time=1am-10:30am){
-        closed
-      }
-      else{
-        open
-      }
-    }
-    else if (day=saturday,Sunday){
-      if (time=1:30am-10:30am){
-        closed
-      }
-      else {
-        open
-      }
-    }
-    document.getElementById("fillme").innerHTML = theDate;
-*/
-  
-}
-
 
 betterWork();
