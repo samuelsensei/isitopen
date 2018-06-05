@@ -10,8 +10,8 @@ function isItOpen (){
     {closesAt: 1.5, opensAt: 10.5}, //Saturday
   ];
   var theDays = [
-    {fromDate:"June 4, 2018 7:00:00", toDate: "June 5, 2018 10:30:00", message: "Happy New Year!"},
-    {fromDate:"June 12, 2018 10:30:00", toDate: "June 14, 2018 10:30:00", message: "Happy New Year!"}
+    {fromDate:"December 31, 2018 7:00:00", toDate: "January 1, 2019 10:30:00", message: "Happy New Year!"},
+    {fromDate:"January 2, 2019 10:30:00", toDate: "January 3, 2019 10:30:00", message: "Happy New Year!"}
   ];
   var closedText = "<font color='red'>Closed</font>";
   var openText = "<font color='green'>Open</font>";
