@@ -64,19 +64,19 @@ function isItOpen (){
 }
 
 function countMeDown(countDownTime){  
-    var theInterval = setInterval (function(){
-      var currentDate = new Date();
-      var timer = (countDownTime - currentDate.getTime())/1000;
-      var hours = Math.floor(timer/(60*60));
-      var minutes = Math.floor(timer%(60*60)/60);
-      var seconds = Math.floor(timer%(60*60)%60);
-      document.getElementById("timeleft").innerHTML = hours + "h " + minutes + "m " + seconds + "s";
-      if (timer <= 0.4){
-        document.getElementById("fillme").innerHTML = closedText;
-        document.getElementById("timeleft").innerHTML = "0h 0m 0s";
-        clearInterval(theInterval);
-      }
-    }, 1000);
-  }
+  var theInterval = setInterval (function(){
+    var currentDate = new Date();
+    var timer = (countDownTime - currentDate.getTime())/1000;
+    var hours = Math.floor(timer/(60*60));
+    var minutes = Math.floor(timer%(60*60)/60);
+    var seconds = Math.floor(timer%(60*60)%60);
+    document.getElementById("timeleft").innerHTML = hours + "h " + minutes + "m " + seconds + "s";
+    if (timer <= 0.4){
+      document.getElementById("fillme").innerHTML = closedText;
+      document.getElementById("timeleft").innerHTML = "0h 0m 0s";
+      clearInterval(theInterval);
+    }
+  }, 1000);
+}
 
 isItOpen();
