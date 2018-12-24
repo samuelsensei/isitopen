@@ -45,7 +45,7 @@ function isItOpen (){
       countMeDown(a);
       return;
     }
-    else if (theDate.getTime() > a && theDate.getTime() < b){
+    else if (theDate.getTime() > a.getTime() && theDate.getTime() < b.getTime()){
       document.getElementById("fillme").innerHTML = closedText + "<br />" + theDays[i].message;
       return;
     }
