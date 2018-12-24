@@ -10,7 +10,7 @@ function isItOpen (){
     {closesAt: 1.5, opensAt: 10.5}, //Saturday
   ];
   var theDays = [
-    {fromDate:"December 24, 2018 15:12:00", toDate: "December 25, 2018 23:59:59", premessage: "Closes at 11pm on CHRISTMAS Eve.<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.", message: "Merry Christmas!<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace."},
+    {fromDate:"December 24, 2018 15:16:00", toDate: "December 25, 2018 23:59:59", premessage: "Closes at 11pm on CHRISTMAS Eve.<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.", message: "Merry Christmas!<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace."},
     {fromDate:"January 2, 2019 10:30:00", toDate: "January 3, 2019 10:30:00", message: "Happy New Year!"}
   ];
   var closedText = "<font color='red'>Closed</font>";
@@ -42,7 +42,7 @@ function isItOpen (){
     if(theDate.getMonth() == a.getMonth() && theDate.getDate() == a.getDate() && theDate.getFullYear() == a.getFullYear() && theDate.getTime() < a.getTime()){
       document.getElementById("fillme").innerHTML = openText;
       document.getElementById("fillme2").innerHTML = "<br />" + theDays[i].premessage;
-      countMeDown(a);
+      countMeDown(a.getTime());
       return;
     }
     else if (theDate.getTime() > a.getTime() && theDate.getTime() < b.getTime()){
@@ -72,7 +72,7 @@ function countMeDown(countDownTime){
     var minutes = Math.floor(timer%(60*60)/60);
     var seconds = Math.floor(timer%(60*60)%60);
     document.getElementById("timeleft").innerHTML = hours + "h " + minutes + "m " + seconds + "s";
-    if (timer <= 1.1){
+    if (timer <= 0.4){
       document.getElementById("fillme").innerHTML = closedText;
       document.getElementById("timeleft").innerHTML = "0h 0m 0s";
       clearInterval(theInterval);
