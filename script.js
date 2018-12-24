@@ -72,7 +72,7 @@ function countMeDown(countDownTime){
     var minutes = Math.floor(timer%(60*60)/60);
     var seconds = Math.floor(timer%(60*60)%60);
     document.getElementById("timeleft").innerHTML = hours + "h " + minutes + "m " + seconds + "s";
-    if (timer <= 0.4){
+    if (timer <= 1.1){
       document.getElementById("fillme").innerHTML = closedText;
       document.getElementById("timeleft").innerHTML = "0h 0m 0s";
       clearInterval(theInterval);
