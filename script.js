@@ -10,7 +10,7 @@ function isItOpen (){
     {closesAt: 1.5, opensAt: 10.5}, //Saturday
   ];
   var theDays = [
-    {fromDate:"December 24, 2018 02:00:00", toDate: "December 25, 2018 23:59:59", premessage: "Closes at 11pm on CHRISTMAS Eve.<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.", message: "Merry Christmas!<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace."},
+    {fromDate:"December 24, 2018 15:09:00", toDate: "December 25, 2018 23:59:59", premessage: "Closes at 11pm on CHRISTMAS Eve.<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.", message: "Merry Christmas!<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace."},
     {fromDate:"January 2, 2019 10:30:00", toDate: "January 3, 2019 10:30:00", message: "Happy New Year!"}
   ];
   var closedText = "<font color='red'>Closed</font>";
