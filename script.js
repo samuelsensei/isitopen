@@ -41,8 +41,8 @@ function isItOpen (){
     var b = new Date(theDays[i].toDate);
     if(theDate.getMonth() == a.getMonth() && theDate.getDate() == a.getDate() && theDate.getFullYear() == a.getFullYear() && theDate.getTime() < a.getTime()){
       document.getElementById("fillme").innerHTML = openText;
-      countMeDown(a);
       document.getElementById("fillme2").innerHTML = "<br />" + theDays[i].premessage;
+      countMeDown(a);
       return;
     }
     else if (theDate.getTime() > a && theDate.getTime() < b){
