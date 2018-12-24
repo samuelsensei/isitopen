@@ -14,7 +14,7 @@ function isItOpen (){
     {fromDate:"January 2, 2019 10:30:00", toDate: "January 3, 2019 10:30:00", message: "Happy New Year!"}
   ];
   var closedText = "<font color='red'>Closed</font>";
-  var openText = "<font color='green'>pen</font>";
+  var openText = "<font color='green'>Open</font>";
 
   //Constants
   var theDate = new Date();
@@ -40,8 +40,9 @@ function isItOpen (){
     var a = new Date(theDays[i].fromDate);
     var b = new Date(theDays[i].toDate);
     if(theDate.getMonth() == a.getMonth() && theDate.getDate() == a.getDate() && theDate.getFullYear() == a.getFullYear() && theDate.getTime() < a.getTime()){
-      document.getElementById("fillme").innerHTML = openText + "<br />" + theDays[i].premessage;
+      document.getElementById("fillme").innerHTML = openText;
       countMeDown(a);
+      document.getElementById("fillme2").innerHTML = "<br />" + theDays[i].premessage;
       return;
     }
     else if (theDate.getTime() > a && theDate.getTime() < b){
