@@ -14,7 +14,7 @@ function isItOpen (){
     {fromDate:"January 2, 2019 10:30:00", toDate: "January 3, 2019 10:30:00", message: "Happy New Year!"}
   ];
   var closedText = "<font color='red'>Closed</font>";
-  var openText = "<font color='green'>Open</font>";
+  var openText = "<font color='green'>Oen</font>";
 
   //Constants
   var theDate = new Date();
