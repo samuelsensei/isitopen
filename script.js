@@ -47,6 +47,8 @@ function isItOpen (){
     }
     if (theDate.getTime() > a.getTime() && theDate.getTime() < b.getTime()){
       document.getElementById("fillme").innerHTML = closedText + "<br />" + theDays[i].message;
+      countMeDown(b);
+      return;
     }
   }
   if (theTime() >= weekTimes[theDate.getDay()].closesAt && theTime() < weekTimes[theDate.getDay()].opensAt){
