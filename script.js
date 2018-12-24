@@ -10,7 +10,7 @@ function isItOpen (){
     {closesAt: 1.5, opensAt: 10.5}, //Saturday
   ];
   var theDays = [
-    {fromDate:"December 24, 2018 23:00:00", toDate: "December 25, 23:59:59", message: "Merry Christmas! ISAIAH 9:6"},
+    {fromDate:"December 24, 2018 23:00:00", toDate: "December 25, 23:59:59", premessage: "Closes at 11pm for CHRISTMAS.<br>Isaiah 9:6<br>For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace.", message: "Merry Christmas! ISAIAH 9:6"},
     {fromDate:"January 2, 2019 10:30:00", toDate: "January 3, 2019 10:30:00", message: "Happy New Year!"}
   ];
   var closedText = "<font color='red'>Closed</font>";
@@ -40,7 +40,7 @@ function isItOpen (){
     var a = new Date(theDays[i].fromDate);
     var b = new Date(theDays[i].toDate);
     if(theDate.getMonth() == a.getMonth() && theDate.getDate() == a.getDate() && theDate.getFullYear() == a.getFullYear() && theDate.getTime() < a.getTime()){
-      document.getElementById("fillme").innerHTML = openText;
+      document.getElementById("fillme").innerHTML = openText + "<br />" + theDays[i].premessage;
       countMeDown(a);
       return;
     }
